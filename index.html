@@ -228,15 +228,38 @@
 				<h1 class="centered">Technical</h1>
 				<br>
 				<br>
-				<div class="col-lg-6 centered">
-					<img class="centered" src="assets/img/mobile.png" alt="">
+				<div class="col-lg-12 centered">
+				<p>Moteye uses a distributed system architecture of nine applications.
+				These may run on independant computer systems.
+				Connection is establishd via WiFi.</p>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-6">
+					<img class="img-responsive center-block" src="assets/img/mobile.png" alt="">
 				</div>
 				
-				<div class="col-lg-6">
-				<!--	<h3>Some Features</h3>
-					<br> -->
-				askjdhaksjdhaskjdskadsakdasjkdaskhdkashdkjaskdjhaskjdh.
-		           
+				<div class="col-lg-6 col-md-6 col-sm-6">
+				<br>
+				<p>Here on top the modules are shown which create input to the system, namely the eye trackers as well as the joystick control.</p>
+				<div class="visible-lg-block visible-md-block">
+					<br>
+					<br>
+					<br>
+				</div>
+				<p>Gaze data is received and preprocessed by the Trackteye module written in C# and then handed over to the Java part of this module, processed and sent to the Coreteye module.
+				Joystick input comes in via the serial port of the Arduino, is parsed and then also directed to Coreteye.</p>
+				<div class="visible-lg-block visible-md-block visible-sm-block">
+					<br>
+				</div>
+				<div class="visible-lg-block">
+					<br>
+					<br>
+				</div>
+				<p>Coreteye fuses this data runs logic and dispatches events to the components.</p>
+				<div class="visible-lg-block visible-md-block visible-sm-block">
+					<br>
+					<br>
+				</div>
+				<p>The components, including the radio called Voxteye, the mirror called Mirteye and the hands free call system called Callteye, react to incoming events.</p>
 				</div>
 			</div>
 			<br>
@@ -292,7 +315,7 @@
 	<section id="contact" name="contact"></section>
 	<div id="footerwrap">
 		<div class="container">
-			<div class="col-lg-4">
+			<div class="col-lg-6">
 				<h3>Address</h3>
 				<p>
 				Ulm University,<br/>
@@ -302,29 +325,9 @@
 				Germany
 				</p>
 			</div>
+		
 			
-			<div class="col-lg-4">
-				<h3>Drop Us A Line</h3>
-				<br>
-				<form role="form" action="#" method="post" enctype="plain"> 
-				  <div class="form-group">
-				    <label for="name1">Your Name</label>
-				    <input type="name" name="Name" class="form-control" id="name1" placeholder="Your Name">
-				  </div>
-				  <div class="form-group">
-				    <label for="email1">Email address</label>
-				    <input type="email" name="Mail" class="form-control" id="email1" placeholder="Enter email">
-				  </div>
-				  <div class="form-group">
-				  	<label>Your Text</label>
-				  	<textarea class="form-control" name="Message" rows="3"></textarea>
-				  </div>
-				  <br>
-				  <button type="submit" class="btn btn-large btn-success">Submit</button>
-				</form>
-			</div>
-			
-			<div class="col-lg-4">
+			<div class="col-lg-6">
 				<h3>Resources</h3>
 				<a role="button" class="btn btn-large btn-info" href="https://github.com/Cassio90/moteye" >Sourcecode</a>
 			</div>
