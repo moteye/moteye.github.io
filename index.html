@@ -7,7 +7,7 @@
     <meta name="author" content="Team Moteye">
     <link rel="shortcut icon" href="assets/ico/favicon.png">
 
-    <title>Moteye - Gaze-Tracking in an Automotive Context</title>
+    <title>Moteye - Gaze Tracking in an Automotive Context</title>
 
     <!-- Bootstrap core CSS -->
     <link href="assets/css/bootstrap.css" rel="stylesheet">
@@ -58,21 +58,21 @@
 	    	<div class="row centered">
 	    		<div class="col-lg-12">
 					<h1>Welcome to <b>Moteye</b></h1>
-					<h3>Gaze-Tracking in an Automotive Context</h3>
+					<h3>Gaze Tracking in an Automotive Context</h3>
 					<br>
 	    		</div>
 	    		<div class="col-lg-2">
 					<br>
 					<img class="hidden-xs hidden-sm hidden-md" src="assets/img/arrow4.png">
 	    			<h5>Select by Gaze</h5>
-	    			<p>Have a quick look at a cockpit component to select it.</p>
+	    			<p>Take a quick look at a cockpit component to select it.</p>
 	    		</div>
 	    		<div class="col-lg-8">
 	    			<img class="img-responsive" src="assets/img/app-bg.png" alt="">
 	    		</div>
 	    		<div class="col-lg-2">
 	    			<h5>Control by Joystick</h5>
-	    			<p>Interact with the component keeping your hands on the wheel.</p>
+	    			<p>Interact with the component while keeping your hands on the wheel.</p>
 					<img class="hidden-xs hidden-sm hidden-md" src="assets/img/arrow3.png">
 	    		</div>
 				<br>
@@ -177,12 +177,12 @@
 				<div class="col-lg-3 col-md-3 col-sm-6">
 					<img class="img-responsive center-block" src="assets/img/intro01.png" alt="">
 					<h3>Eye Tracking</h3>
-					<p>Use affordable but state of the art eye tracking technology upgrading your cockpit to the next level of humand computer interaction.</p>
+					<p>Use affordable but state of the art eye tracking technology to upgrade your car cockpit to the next level of human computer interaction.</p>
 				</div>
 				<div class="col-lg-3 col-md-3 col-sm-6">
 					<img class="img-responsive center-block" src="assets/img/intro02.png" alt="">
 					<h3>Single Control</h3>
-					<p>Merge the multitude of todays control mechanisms into a single and easy to reach joystick.</p>
+					<p>Merge the multitude of today's control mechanisms into a single and easy to reach joystick.</p>
 				</div>
 				<div class="col-lg-3 col-md-3 col-sm-6">
 					<img class="img-responsive center-block" src="assets/img/intro03.png" alt="">
@@ -231,7 +231,7 @@
 				<div class="col-lg-12 centered">
 				<p>Moteye uses a distributed system architecture of nine applications.
 				These may run on independant computer systems.
-				Connection is establishd via WiFi.</p>
+				Connection is establishd via internet protocols for the purpose of this prototype.</p>
 				</div>
 				<div class="col-lg-6 col-md-6 col-sm-6">
 					<img class="img-responsive center-block" src="assets/img/mobile.png" alt="">
@@ -239,14 +239,17 @@
 				
 				<div class="col-lg-6 col-md-6 col-sm-6">
 				<br>
-				<p>Here on top the modules are shown which create input to the system, namely the eye trackers as well as the joystick control.</p>
+				<p>On top the modules are shown which create input to the system: namely the eye trackers as well as the joystick control.
+				Any number of eye trackers can be attached to the system.
+				However due to driver limitations only seven eye trackers can be used per driver instance.
+				By using multiple instances of Trackteye this limitation can be mitigated.</p>
 				<div class="visible-lg-block visible-md-block">
 					<br>
 					<br>
-					<br>
 				</div>
-				<p>Gaze data is received and preprocessed by the Trackteye module written in C# and then handed over to the Java part of this module, processed and sent to the Coreteye module.
-				Joystick input comes in via the serial port of the Arduino, is parsed and then also directed to Coreteye.</p>
+				<p>Gaze data is received and preprocessed by the Trackteye module written in C# and then handed over to the Java part of this module.
+				There it is processed and sent to the Coreteye module.
+				Joystick input comes in via the serial port of the Arduino, is parsed, and then also directed to Coreteye.</p>
 				<div class="visible-lg-block visible-md-block visible-sm-block">
 					<br>
 				</div>
@@ -254,12 +257,16 @@
 					<br>
 					<br>
 				</div>
-				<p>Coreteye fuses this data runs logic and dispatches events to the components.</p>
+				<p>Coreteye merges the gaze and button data and then runs selection logic on it.
+				This logic detects which component, if any, has been selected and decides where to dispatch the event to.
+				Coreteye also handles the user profile functions of the system, allowing multiple profiles to be managed and used according to the user's preferences.</p>
 				<div class="visible-lg-block visible-md-block visible-sm-block">
 					<br>
 					<br>
 				</div>
-				<p>The components, including the radio called Voxteye, the mirror called Mirteye and the hands free call system called Callteye, react to incoming events.</p>
+				<p>The components, including the radio called Voxteye, the mirror called Mirteye, and the hands free call system called Callteye react to incoming events.
+				As can be seen by the implementation of the Android Callteye app, components are not restricted to pure Java applications.
+				Each component is totally free to implement any desired functionality build on top of a small framework that handles the reception of events from Coreteye.</p>
 				</div>
 			</div>
 			<br>
@@ -282,7 +289,7 @@
 					<a href="#" class="icon icon-twitter"></a>
 					<a href="#" class="icon icon-facebook"></a>
 					<a href="#" class="icon icon-flickr"></a>
-					<p>Responsible for gaze interactions.</p>
+					<p>Primarily responsible for extracting gaze data from the eye trackers.</p>
 				</div><!-- col-lg-3 -->
 				
 				<div class="col-lg-4 centered">
@@ -292,7 +299,8 @@
 					<a href="#" class="icon icon-twitter"></a>
 					<a href="#" class="icon icon-facebook"></a>
 					<a href="#" class="icon icon-flickr"></a>
-					<p>Abstract thinker responsible for logic and abstractions.</p>
+					<p>Abstract thinker responsible for logic and abstractions.
+					Mainly focused on Coreteye and supporting features.</p>
 				</div><!-- col-lg-3 -->
 				
 				<div class="col-lg-4 centered">
@@ -302,7 +310,7 @@
 					<a href="#" class="icon icon-twitter"></a>
 					<a href="#" class="icon icon-facebook"></a>
 					<a href="#" class="icon icon-flickr"></a>
-					<p>Responsible for construction and low level hardware development.</p>
+					<p>Predominantly responsible for construction and low level hardware development, notably the Arduino parts.</p>
 				</div><!-- col-lg-3 -->
 			</div><!-- row -->
 			<br>
