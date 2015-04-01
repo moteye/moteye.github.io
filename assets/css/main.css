@@ -179,7 +179,7 @@ a:after {
     left: 40px;
     width: 2px;
     margin-left: -1.5px;
-    background-color: #3bcc54;
+    background-color: #2F2F2F;
 }
 
 .timeline>li {
@@ -227,7 +227,7 @@ a:after {
     width: 80px;
     height: 80px;
     margin-left: 0;
-    border: 7px solid #3bcc54;
+    border: 7px solid #2F2F2F;
     border-radius: 100%;
     text-align: center;
     color: #fff;
@@ -238,6 +238,10 @@ a:after {
     margin-top: 12px;
     font-size: 10px;
     line-height: 14px;
+	color: white;
+}
+
+.timeline h1 {
 	color: white;
 }
 
