@@ -39,13 +39,13 @@
 	        </div>
 	        <div class="navbar-collapse collapse">
 	          <ul class="nav navbar-nav">
-	            <li class="active"><a href="#home" class="smothscroll">Home</a></li>
-	            <li><a href="#concept" class="smothScroll">Concept</a></li>
-				<li><a href="#features" class="smothScroll">Features</a></li>
-				<li><a href="#video" class="smothScroll">Video</a></li>
-				<li><a href="#implementation" class="smothScroll">Technical</a></li>
-				<li><a href="#team" class="smothScroll">Team</a></li>
-	            <li><a href="#contact" class="smothScroll">Contact</a></li>
+	            <li class="active"><a href="#home" class="smoothscroll">Home</a></li>
+	            <li><a href="#concept" class="smoothScroll">Concept</a></li>
+				<li><a href="#features" class="smoothScroll">Features</a></li>
+				<li><a href="#video" class="smoothScroll">Video</a></li>
+				<li><a href="#implementation" class="smoothScroll">Technical</a></li>
+				<li><a href="#team" class="smoothScroll">Team</a></li>
+	            <li><a href="#contact" class="smoothScroll">Contact</a></li>
 	          </ul>
 	        </div><!--/.nav-collapse -->
 	      </div>
@@ -107,7 +107,9 @@
                                     <h4>Motivation</h4>
                                 </div>
                                 <div class="timeline-body">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                                    <p>Have you ever been confused by the amount of controls in today's car cockpits?
+									Noticed that taking your hand off the steering wheel to control a interface reduces safety in emergency situations?
+									Have you ever rented a car and searched for a specific function?</p>
                                 </div>
                             </div>
                         </li>
@@ -117,10 +119,10 @@
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
-                                    <h4>Idea</h4>
+                                    <h4>Technology</h4>
                                 </div>
                                 <div class="timeline-body">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                                    <p>Looking through possibilities to stem this tide of output and input in a car, eye trackers show great potential. They are precise and have recently become small and affordable and thus allow easy integration in a automotive environment.</p>
                                 </div>
                             </div>
                         </li>
@@ -130,10 +132,10 @@
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
-                                    <h4>Gaze Context Mapping</h4>
+                                    <h4>Idea</h4>
                                 </div>
                                 <div class="timeline-body">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                                    <p>How may eye trackers be used in an automotive setting? Can we unify diver input for the flood of controls for tertiary input devices such as entertainment systems? Increase safety by allowing full control from the steering wheel? Reducing the time required to find the correct control for a cockpit component?</p>
                                 </div>
                             </div>
                         </li>
@@ -143,10 +145,10 @@
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
-                                    <h4>Automatic Mirror Adjustment</h4>
+                                    <h4>Gaze Context Mapping</h4>
                                 </div>
                                 <div class="timeline-body">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                                    <p>Why don't you define physical components of a car cockpit as targets and map the user's eye gaze onto them? This provides the possibility to select these with a short glance. To interact with them a single control joystick is placed on the steering wheel allowing adjistments while keeping your hands on the wheel. </p>
                                 </div>
                             </div>
                         </li>
@@ -220,7 +222,7 @@
 	    </div> <!--/ .container -->
 	</div><!--/ #headerwrap -->
 	
-		<section id="implementation" name="implementation"></section>
+	<section id="implementation" name="implementation"></section>
 	<!-- FEATURES WRAP -->
 	<div id="implementationwrap">
 		<div class="container">
@@ -238,36 +240,23 @@
 				</div>
 				
 				<div class="col-lg-6 col-md-6 col-sm-6">
-				<br>
 				<p>On top the modules are shown which create input to the system: namely the eye trackers as well as the joystick control.
 				Any number of eye trackers can be attached to the system.
 				However due to driver limitations only seven eye trackers can be used per driver instance.
 				By using multiple instances of Trackteye this limitation can be mitigated.</p>
-				<div class="visible-lg-block visible-md-block">
-					<br>
-					<br>
-				</div>
+
 				<p>Gaze data is received and preprocessed by the Trackteye module written in C# and then handed over to the Java part of this module.
 				There it is processed and sent to the Coreteye module.
 				Joystick input comes in via the serial port of the Arduino, is parsed, and then also directed to Coreteye.</p>
-				<div class="visible-lg-block visible-md-block visible-sm-block">
-					<br>
-				</div>
-				<div class="visible-lg-block">
-					<br>
-					<br>
-				</div>
+
 				<p>Coreteye merges the gaze and button data and then runs selection logic on it.
 				This logic detects which component, if any, has been selected and decides where to dispatch the event to.
 				Coreteye also handles the user profile functions of the system, allowing multiple profiles to be managed and used according to the user's preferences.</p>
-				<div class="visible-lg-block visible-md-block visible-sm-block">
-					<br>
-					<br>
-				</div>
+			</div>
+			<div class="col-lg-6 col-md-6">
 				<p>The components, including the radio called Voxteye, the mirror called Mirteye, and the hands free call system called Callteye react to incoming events.
 				As can be seen by the implementation of the Android Callteye app, components are not restricted to pure Java applications.
 				Each component is totally free to implement any desired functionality build on top of a small framework that handles the reception of events from Coreteye.</p>
-				</div>
 			</div>
 			<br>
 			<br>
