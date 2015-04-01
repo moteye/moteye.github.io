@@ -179,7 +179,7 @@ a:after {
     left: 40px;
     width: 2px;
     margin-left: -1.5px;
-    background-color: #34495e;
+    background-color: #3bcc54;
 }
 
 .timeline>li {
@@ -227,7 +227,7 @@ a:after {
     width: 80px;
     height: 80px;
     margin-left: 0;
-    border: 7px solid #34495e;
+    border: 7px solid #3bcc54;
     border-radius: 100%;
     text-align: center;
     color: #fff;
@@ -238,6 +238,7 @@ a:after {
     margin-top: 12px;
     font-size: 10px;
     line-height: 14px;
+	color: white;
 }
 
 .timeline>li.timeline-inverted>.timeline-panel {
@@ -306,7 +307,6 @@ a:after {
         margin-top: 16px;
         font-size: 13px;
         line-height: 18px;
-		color: white;
     }
 
     .timeline>li.timeline-inverted>.timeline-panel {
